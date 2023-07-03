@@ -3,7 +3,6 @@ let sdk;
 const { Sdk } = require("openflow-sdk");
 require("dotenv").config();
 
-const supportedChainIds = [250, 1, 43114];
 const networkMapping = {
   1: "ethereum",
   250: "fantom",
