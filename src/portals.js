@@ -1,7 +1,6 @@
 #! /usr/bin/env node
 let sdk;
 const { Sdk, utils: sdkUtils } = require("openflow-sdk");
-const solverUtils = require("./utils");
 require("dotenv").config();
 
 const networkMapping = {
@@ -37,20 +36,18 @@ const fillHandler = async (order) => {
   const {
     tx: { to: target, data: executorData },
   } = responseJson;
-  await solverUtils.signAndExecuteOrder(sdk, order, target, executorData);
+  await sdk.executeOrder(order, target, executorData);
 };
 
 const start = async () => {
   const options = {
     websocketUrl: "ws://localhost:9080",
+    privateKey: process.env.PRIVATE_KEY,
     quoteHandler,
     fillHandler,
   };
   sdk = new Sdk(options);
-  const authPayload = sdkUtils.generateAuthenticationPayload(
-    process.env.PRIVATE_KEY
-  );
-  await sdk.connect(authPayload);
+  await sdk.connect();
 };
 
 start();

@@ -1,8 +1,15 @@
 const { ethers } = require("ethers");
 
+/**
+ * @notice Sign and execute an order directly (without using built-in SDK methods).
+ * @dev While the Openflow SDK can technically be utilized without passing private key
+ * in the constructor it is not recommended. After signing and filling an order
+ * the solver should notify the SDK to ensure the end user receives a real-time order
+ * status update. This logic is typically handled in the SDK's `executeOrder` method,
+ * however, if desired this helper utility can be used instead.
+ */
 module.exports = {
   async signAndExecuteOrder(sdk, order, target, executorData) {
-    console.log("Executing order", order);
     const transaction = await sdk.generateTransaction(
       order,
       target,
