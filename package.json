@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "dotenv": "^16.3.1",
+    "ethers": "^6.6.2",
     "openflow-sdk": "file:../openflow-sdk"
   }
 }
