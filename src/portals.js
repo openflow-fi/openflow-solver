@@ -41,7 +41,7 @@ const fillHandler = async (order) => {
 
 const start = async () => {
   const options = {
-    websocketUrl: "ws://localhost:9080",
+    websocketUrl: process.env.WEBSOCKET_URL,
     privateKey: process.env.PRIVATE_KEY,
     quoteHandler,
     fillHandler,
