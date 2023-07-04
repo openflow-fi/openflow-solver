@@ -1,0 +1,18 @@
+services:
+  portals:
+    command: sh -c "npm install && node src/portals"
+    image: node:18
+    working_dir: /usr/src/app
+    restart: on-failure
+    env_file: .env
+    volumes:
+      - ./:/usr/src/app
+
+  uniswapV2:
+    command: sh -c "npm install && node src/uniswapV2"
+    image: node:18
+    working_dir: /usr/src/app
+    restart: on-failure
+    env_file: .env
+    volumes:
+      - ./:/usr/src/app

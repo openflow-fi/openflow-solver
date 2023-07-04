@@ -2,9 +2,20 @@
 
 ## Usage
 
-- `git clone git@github.com:openflow-fi/openflow-solver.git`
-- `cd openflow-solver`
+### Initialize repo
+
+- `git clone git@github.com:openflow-fi/openflow-solvers.git`
+- `cd openflow-solvers`
 - `yarn`
 - `cp .env.sample .env`
 - Add solver private key to `.env` (solver must have native token)
-- `node src/portals.js`
+
+### Run solvers
+
+#### Single solver
+
+`node src/portals`
+
+#### Multiple solvers
+
+`docker-compose up`
