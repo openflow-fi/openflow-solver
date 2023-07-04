@@ -217,8 +217,10 @@ node-gyp-build@^4.2.0:
   resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.6.0.tgz#0c52e4cbf54bbd28b709820ef7b6a3c2d6209055"
   integrity sha512-NTZVKn9IylLwUzaKjkas1e4u2DLNcV4rdYagA4PWdPwW87Bi7z+BznyKSRwS/761tV/lzCGXplWsiaMjLqP2zQ==
 
-"openflow-sdk@file:../openflow-sdk":
+openflow-sdk@^0.0.1:
   version "0.0.1"
+  resolved "https://registry.yarnpkg.com/openflow-sdk/-/openflow-sdk-0.0.1.tgz#cb74daf672ac83e7f634693fa302ea9fe1bbd33e"
+  integrity sha512-SrPx581eC7vXPEeQY0e6UCgJNXFAPDMeaMPv42IiWvSx6zuzEQ1lNapxzR+oacVfd7Rxdc+ChIbMi9o5lpmXVA==
   dependencies:
     "@metamask/eth-sig-util" "^6.0.0"
     dotenv "^16.3.1"
