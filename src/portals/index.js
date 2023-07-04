@@ -3,6 +3,8 @@ let sdk;
 const { Sdk, utils: sdkUtils } = require("openflow-sdk");
 require("dotenv").config();
 
+const protocol = "portals";
+
 const networkMapping = {
   1: "ethereum",
   250: "fantom",
@@ -16,12 +18,13 @@ const quoteHandler = async (request) => {
   const slug = networkMapping[chainId];
   const quoteUrl = `${portalsBaseUri}/${slug}/estimate?sellToken=${fromToken}&buyToken=${toToken}&sellAmount=${fromAmount}&slippagePercentage=0.030&takerAddress=0x0000000000000000000000000000000000000000&validate=false`;
   const responseJson = await (await fetch(quoteUrl)).json();
-  const max = 99;
-  const min = 90;
+  const max = 99.5;
+  const min = 99.5;
   const multiplier = Math.floor(Math.random() * (max - min + 1) + min) / 100;
   const quote = {
     ...request,
     toAmount: Math.floor(responseJson.buyAmount * multiplier),
+    protocol,
   };
   sdk.respondToQuoteRequest(quote);
 };

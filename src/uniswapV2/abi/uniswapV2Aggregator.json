@@ -1,0 +1,38 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "contract IUniswapV2Router",
+        "name": "router",
+        "type": "address"
+      },
+      { "internalType": "address[]", "name": "path", "type": "address[]" },
+      { "internalType": "uint256", "name": "fromAmount", "type": "uint256" },
+      { "internalType": "uint256", "name": "toAmount", "type": "uint256" }
+    ],
+    "name": "executeOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "wNativeAddress",
+        "type": "address"
+      },
+      { "internalType": "address", "name": "routerAddress", "type": "address" },
+      { "internalType": "uint256", "name": "amountIn", "type": "uint256" },
+      { "internalType": "address", "name": "token0Address", "type": "address" },
+      { "internalType": "address", "name": "token1Address", "type": "address" }
+    ],
+    "name": "getAmountOutFromRouter",
+    "outputs": [
+      { "internalType": "uint256", "name": "amountOut", "type": "uint256" },
+      { "internalType": "address[]", "name": "path", "type": "address[]" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

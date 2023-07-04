@@ -1,0 +1,48 @@
+{
+  "43114": [
+    {
+      "name": "SushiSwap",
+      "router": "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506"
+    },
+    {
+      "name": "TraderJoe",
+      "router": "0x60aE616a2155Ee3d9A68541Ba4544862310933d4"
+    },
+    {
+      "name": "HakuSwap",
+      "router": "0x5F1FdcA239362c5b8A8Ada26a256ac5626CC33E0"
+    },
+    {
+      "name": "RadioShack",
+      "router": "0x763D8D37669bB18064b410e17E3bB46BCF34F487"
+    },
+    {
+      "name": "Frax Swap",
+      "router": "0xc2544A32872A91F4A553b404C6950e89De901fdb"
+    },
+    {
+      "name": "Pangolin",
+      "router": "0xe54ca86531e17ef3616d22ca28b0d458b6c89106"
+    },
+    {
+      "name": "0.exchange",
+      "router": "0x85995d5f8ee9645cA855e92de16FA62D26398060"
+    },
+    {
+      "name": "Lydia",
+      "router": "0xA52aBE4676dbfd04Df42eF7755F01A3c41f28D27"
+    },
+    {
+      "name": "Elk",
+      "router": "0x9E4AAbd2B3E60Ee1322E94307d0776F2c8e6CFbb"
+    },
+    {
+      "name": "Complus Network",
+      "router": "0x78c18E6BE20df11f1f41b9635F3A18B8AD82dDD1"
+    },
+    {
+      "name": "EmpireDEX",
+      "router": "0xdADaae6cDFE4FA3c35d54811087b3bC3Cd60F348"
+    }
+  ]
+}
